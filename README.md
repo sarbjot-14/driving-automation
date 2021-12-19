@@ -2,45 +2,32 @@
 <table>
 <tr>
 <td>
-  Note Zipper provides you one safe place for all your notes.
+  Keeping tabs with the automation in our world
 </td>
 </tr>
 </table>
 
-# ![Note Zipper](https://github.com/Piyush55dude/notezipper/blob/master/images/landing.png)
 
-## [Click Here to Watch Full tutorial on Youtube](https://www.youtube.com/watch?v=IQXjO0t4XRM&list=PLKhlp2qtUcSYC7EffnHzD-Ws2xG-j3aYo)
-![MERN 1](https://user-images.githubusercontent.com/51760520/124705210-ea67ab00-df12-11eb-88cd-e9060c2942b9.png)
 
 ## Demo
-Here is a working live demo :  https://notezipper.herokuapp.com/
+Here is a working live demo :  https:
 
-## Site
+# Develop
+make sure NODE_ENV is set to development
+npm run dev
 
-### Landing Page
+## Deploy
+cd frontend
+npm run build
+push to production branch
 
-![](https://github.com/Piyush55dude/notezipper/blob/master/images/landing.png)
+# Trouble Shooting
+https://stackoverflow.com/questions/69693907/error-err-package-path-not-exported-package-subpath-lib-tokenize-is-not-d
 
-### Login Form
-You can register a new account or login with an existing one.
 
-![](https://github.com/Piyush55dude/notezipper/blob/master/images/login.png)
+removed /node_modules and yarn.lock file.
+then reinstalled my deleted packages/file using yarn install
 
-### Edit Profile
-
-![](https://github.com/Piyush55dude/notezipper/blob/master/images/profile.png)
-
-### Create a Note
-
-![](https://github.com/Piyush55dude/notezipper/blob/master/images/create.png)
-
-### All Notes
-
-![](https://github.com/Piyush55dude/notezipper/blob/master/images/allnotes.png)
-
-### Edit Note
-
-![](https://github.com/Piyush55dude/notezipper/blob/master/images/edit.png)
 
 ## Built with 
 
@@ -52,7 +39,14 @@ You can register a new account or login with an existing one.
 
 ## Team
 
+[![Sarbjot Singh](https://avatars1.githubusercontent.com/u/51760520?v=3&s=144)](https://github.com/sarbjot-14)
+
+MIT © [Sarbjot](https://github.com/sarbjot-14)
+
+## Credit
 [![Piyush Agarwal](https://avatars1.githubusercontent.com/u/51760520?v=3&s=144)](https://github.com/piyush-eon)
 
 MIT © [Piyush Agarwal ](https://github.com/piyush-eon)
 
+## [Click Here to Watch Full tutorial on Youtube](https://www.youtube.com/watch?v=IQXjO0t4XRM&list=PLKhlp2qtUcSYC7EffnHzD-Ws2xG-j3aYo)
+![MERN 1](https://user-images.githubusercontent.com/51760520/124705210-ea67ab00-df12-11eb-88cd-e9060c2942b9.png)
