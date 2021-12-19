@@ -1,5 +1,5 @@
 {
-  "name": "driving automation",
+  "name": "driving_automation",
   "version": "1.0.0",
   "description": "Driving Automation",
   "main": "server.js",
