@@ -15,6 +15,7 @@ router
   .get(getNoteById)
   .delete(protect, DeleteNote)
   .put(protect, UpdateNote);
+  
 router.route("/create").post(protect, CreateNote);
 
 export default router;

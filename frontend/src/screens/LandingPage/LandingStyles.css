@@ -13,9 +13,9 @@
   min-height: 93vh;
   display: flex;
   align-items: center;
-  background-image: url("../../background1.jpg");
+  /* background-image: url("../../background1.jpg");
   background-position: center;
-  background-size: cover;
+  background-size: cover; */
 }
 .buttonContainer {
   margin-top: 50px;
@@ -25,7 +25,7 @@
 
 .landingbutton {
   width: 200px;
-  height: 55px;
+ 
 }
 
 @media only screen and (min-width: 1200px) {
@@ -43,6 +43,6 @@
   }
   .landingbutton {
     width: 150px;
-    height: 50px;
+
   }
 }

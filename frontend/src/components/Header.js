@@ -43,33 +43,17 @@ function Header({ setSearch }) {
             )}
           </Nav>
           <Nav>
-            {userInfo ? (
-              <>
-                <Nav.Link href="/mynotes">My Notes</Nav.Link>
-                <NavDropdown
-                  title={`${userInfo.name}`}
-                  id="collasible-nav-dropdown"
-                >
-                  <NavDropdown.Item href="/profile">
-                    {/* <img
-                      alt=""
-                      src={`${userInfo.pic}`}
-                      width="25"
-                      height="25"
-                      style={{ marginRight: 10 }}
-                    /> */}
-                    My Profile
-                  </NavDropdown.Item>
+         
+             
+                <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link href="/">Tech Stack</Nav.Link>
+                <Nav.Link href="/">Pricing</Nav.Link>
+                <Nav.Link href="/">Polls</Nav.Link>
+                <Nav.Link href="/">Transition</Nav.Link>
 
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item onClick={logoutHandler}>
-                    Logout
-                  </NavDropdown.Item>
-                </NavDropdown>
-              </>
-            ) : (
-              <Nav.Link href="/login">Login</Nav.Link>
-            )}
+               
+              
+           
           </Nav>
         </Navbar.Collapse>
       </Container>
