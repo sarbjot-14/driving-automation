@@ -4,29 +4,64 @@ import { LineChart, Line, YAxis, XAxis, CartesianGrid, Tooltip, Legend } from 'r
 
 const data = [
   {
-      "name": "Jan 2019",
+    "name": "Jan 2019",
+    "Waymo": 3432,
+    "Cruise": 2342,
+    "Apple":1000
+},
+{
+    "name": "Feb 2019",
+    "Waymo": 2342,
+    "Cruise": 3246,
+    "Apple":5000
+},
+{
+    "name": "Mar 2019",
+    "Waymo": 4565,
+    "Cruise": 4556,
+    "Apple":4000
+},
+{
+    "name": "Apr 2019",
+    "Waymo": 6654,
+    "Cruise": 4465,
+    "Apple":3000
+},
+{
+    "name": "May 2019",
+    "Waymo": 8765,
+    "Cruise": 4553,
+    "Apple":4000
+},
+  {
+      "name": "Jan 2020",
       "Waymo": 3432,
-      "Cruise": 2342
+      "Cruise": 2342,
+      "Apple":1000
   },
   {
-      "name": "Feb 2019",
+      "name": "Feb 2020",
       "Waymo": 2342,
-      "Cruise": 3246
+      "Cruise": 3246,
+      "Apple":5000
   },
   {
-      "name": "Mar 2019",
+      "name": "Mar 2020",
       "Waymo": 4565,
-      "Cruise": 4556
+      "Cruise": 4556,
+      "Apple":4000
   },
   {
-      "name": "Apr 2019",
+      "name": "Apr 2020",
       "Waymo": 6654,
-      "Cruise": 4465
+      "Cruise": 4465,
+      "Apple":3000
   },
   {
-      "name": "May 2019",
+      "name": "May 2020",
       "Waymo": 8765,
-      "Cruise": 4553
+      "Cruise": 4553,
+      "Apple":4000
   }
 ]
 
@@ -42,6 +77,7 @@ const  MileageTwo = () =>{
                 <Legend />
                 <Line type="monotone" dataKey="Waymo" stroke="#0095FF" />
                 <Line type="monotone" dataKey="Cruise" stroke="#FF0000" />
+                <Line type="monotone" dataKey="Apple" stroke="#FF0000" />
             </LineChart>
         )
     };

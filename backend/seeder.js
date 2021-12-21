@@ -16,15 +16,15 @@ const importData = async () => {
     await Note.deleteMany();
     await User.deleteMany();
 
-    const createdUsers = await User.insertMany(users);
+    //const createdUsers = await User.insertMany(users);
 
-    const adminUser = createdUsers[0]._id;
+    //const adminUser = createdUsers[0]._id;
 
-    const sampleNotes = notes.map((note) => {
-      return { ...note, user: adminUser };
-    });
+    // const sampleNotes = notes.map((note) => {
+    //   return { ...note, user: adminUser };
+    // });
 
-    await Note.insertMany(sampleNotes);
+    await Note.insertMany(notes);
 
     console.log("Data Imported!".green.inverse);
     process.exit();

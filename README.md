@@ -1,4 +1,4 @@
-# Note Zipper
+# Driving Automation
 <table>
 <tr>
 <td>
@@ -10,7 +10,7 @@
 
 
 ## Demo
-Here is a working live demo :  https:
+Here is a working live demo :  https://driving-automation.herokuapp.com/
 
 # Develop
 make sure NODE_ENV is set to development
@@ -25,7 +25,7 @@ push to production branch
 https://stackoverflow.com/questions/69693907/error-err-package-path-not-exported-package-subpath-lib-tokenize-is-not-d
 
 
-removed /node_modules and yarn.lock file.
+removed /node_modules and yarn.lock files
 then reinstalled my deleted packages/file using yarn install
 
 
