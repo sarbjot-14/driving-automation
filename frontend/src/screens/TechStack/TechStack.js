@@ -21,7 +21,7 @@ function TechStack() {
     // successCreate,
     // successUpdate,
   ]);
-    const headers = ['Participant','Model','Lidar', 'Camera', 'Radar','Level','Compute','Providing Service']
+    const headers = ['Participant','Model','Lidar', 'Camera', 'Radar','Compute','Level','Providing Service']
     const data = [{"Id":1, "details":{}}]
     return (
         <div>
@@ -41,12 +41,12 @@ function TechStack() {
            return <tbody><tr key={stack._id}>
                <td>{stack.participant}</td>
                <td>{stack.model}</td>
-               <td>{stack.lidar}</td>
-               <td>{stack.camera}</td>
-               <td>{stack.radar}</td>
+               <td>{stack.lidar.trim() !==""?(stack.lidar.split('|').map((point)=>{return <li>{point.trim()}</li>})):""}</td>
+               <td>{stack.camera.trim() !==""?(stack.camera.split('|').map((point)=>{return <li>{point.trim()}</li>})):""}</td>
+               <td>{stack.radar.trim() !==""?(stack.radar.split('|').map((point)=>{return <li>{point.trim()}</li>})):""}</td>
+               <td>{stack.compute.trim() !==""?(stack.compute.split('|').map((point)=>{return <li>{point.trim()}</li>})):""}</td>
                <td>{stack.level}</td>
-               <td>{stack.compute}</td>
-               <td>{stack.providingService}</td>
+               <td>{stack.providingService.trim() !==""?(stack.providingService.split('|').map((point)=>{return <li>{point.trim()}</li>})):""}</td>
                </tr></tbody>
         })}
                 {/* <tr>
