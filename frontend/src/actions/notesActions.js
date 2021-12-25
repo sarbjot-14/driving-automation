@@ -24,13 +24,8 @@ export const listNotes = () => async (dispatch, getState) => {
       userLogin: { userInfo },
     } = getState();
 
-    const config = {
-      headers: {
-        Authorization: `Bearer ${userInfo.token}`,
-      },
-    };
 
-    const { data } = await axios.get(`/api/notes`, config);
+    const { data } = await axios.get(`/api/notes`);
 
     dispatch({
       type: NOTES_LIST_SUCCESS,
