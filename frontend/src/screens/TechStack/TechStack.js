@@ -11,8 +11,8 @@ function TechStack() {
 
   const techStackList = useSelector((state) => state.techStackList);
   const { loading, error, techStacks } = techStackList;
-    console.log(techStacks)
-
+  //console.log((techStacks && techStacks[0].participant))
+  console.log(loading)
   useEffect(() => {
     dispatch(listTechStacks());
     
@@ -21,21 +21,35 @@ function TechStack() {
     // successCreate,
     // successUpdate,
   ]);
-    const headers = ['Model','Cameras', 'Lidar', 'Radar','Software','Chip','Cost of Vehicle']
+    const headers = ['Participant','Model','Lidar', 'Camera', 'Radar','Level','Compute','Providing Service']
     const data = [{"Id":1, "details":{}}]
     return (
         <div>
+            {loading && <Loading />}
+      
             <Table responsive>
             <thead>
                 <tr>
-                <th>Company</th>
                 {headers.map((tableHeader, index) => (
                     <th key={index}>{tableHeader}</th>
                 ))}
                 </tr>
             </thead>
-            <tbody>
-                <tr>
+   
+            {techStacks &&
+        techStacks.map((stack)=>{
+           return <tbody><tr key={stack._id}>
+               <td>{stack.participant}</td>
+               <td>{stack.model}</td>
+               <td>{stack.lidar}</td>
+               <td>{stack.camera}</td>
+               <td>{stack.radar}</td>
+               <td>{stack.level}</td>
+               <td>{stack.compute}</td>
+               <td>{stack.providingService}</td>
+               </tr></tbody>
+        })}
+                {/* <tr>
                 <td>Waymo</td>
                 {Array.from({ length: 8 }).map((_, index) => (
                     <td key={index}><ul>
@@ -56,8 +70,8 @@ function TechStack() {
                 {Array.from({ length: 8 }).map((_, index) => (
                     <td key={index}>Table cell {index}</td>
                 ))}
-                </tr>
-            </tbody>
+                </tr> */}
+            
             </Table>
         </div>
     )

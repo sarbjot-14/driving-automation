@@ -22,10 +22,10 @@ const techSchema = mongoose.Schema(
       type: String,
       
     },
-    imageUrl: {
-      type: String,
+    // imageUrl: {
+    //   type: String,
      
-    },
+    // },
     testVehicleDescriptionLink: {
       type: String,
    
