@@ -39,7 +39,6 @@ then reinstalled my deleted packages/file using yarn install
 
 ## Team
 
-[![Sarbjot Singh](https://avatars1.githubusercontent.com/u/51760520?v=3&s=144)](https://github.com/sarbjot-14)
 
 MIT © [Sarbjot](https://github.com/sarbjot-14)
 

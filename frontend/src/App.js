@@ -5,11 +5,11 @@ import Header from "./components/Header";
 import LandingPage from "./screens/LandingPage/LandingPage";
 import MyNotes from "./screens/MyNotes/MyNotes";
 import SingleNote from "./screens/SingleNote/SingleNote";
-import LoginScreen from "./screens/LoginScreen/LoginScreen";
 import RegisterScreen from "./screens/RegisterScreen/RegisterScreen";
 import CreateNote from "./screens/SingleNote/CreateNote";
 import { useState } from "react";
 import ProfileScreen from "./screens/ProfileScreen/ProfileScreen";
+import TechStack from "./screens/TechStack/TechStack";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -19,7 +19,7 @@ function App() {
       <Header setSearch={(s) => setSearch(s)} />
       <main className="App">
         <Route path="/" component={LandingPage} exact />
-        <Route path="/login" component={LoginScreen} />
+        <Route path="/TechSTack" component={TechStack} />
         <Route path="/register" component={RegisterScreen} />
         <Route
           path="/mynotes"
