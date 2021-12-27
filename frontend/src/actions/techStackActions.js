@@ -14,7 +14,7 @@ import {
   
   
       const { data } = await axios.get(`/api/techStacks`);
-  
+      //console.log("tech stacks is "+ data)
       dispatch({
         type: TECHSTACKS_LIST_SUCCESS,
         payload: data,

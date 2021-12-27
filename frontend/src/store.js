@@ -6,9 +6,16 @@ import {
 
 } from "./reducers/techStacksReducers";
 
+import {
+  mileageDisengageListReducer,
+
+} from "./reducers/mileageDisengagementReducers";
+
 
 const reducer = combineReducers({
   techStackList: techStackListReducer,
+  mileageDisengageList: mileageDisengageListReducer
+
 });
 
 

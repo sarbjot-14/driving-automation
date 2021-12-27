@@ -5,6 +5,7 @@ import colors from "colors";
 import path from "path";
 
 import  techStackRoutes from "./routes/techStackRoutes.js";
+import  mileageDisengageRoutes from "./routes/mileageDisengageRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import { errorHandler, notFound } from "./middleware/errorMiddleware.js";
 
@@ -18,6 +19,7 @@ app.use(express.json()); // to accept json data
 
 app.use("/api/techStacks", techStackRoutes);
 app.use("/api/users", userRoutes);
+app.use("/api/mileageDisengage", mileageDisengageRoutes)
 
 // --------------------------deployment------------------------------
 const __dirname = path.resolve();
