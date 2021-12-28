@@ -8,7 +8,7 @@ const collisionSchema = mongoose.Schema(
     },
     accidentDate: {
       type: String,
-      required: true,
+      
     },
     description:{
       type: String,

@@ -35,7 +35,7 @@ def parse_file(file_name):
         company_name = company_name_dirty.replace('BuSINESS NAME: ', '')
 
         print('\n\nCompany name is: ' +company_name)
-        myData["Company"] = company_name
+        myData["Company"] = company_name.strip()
     else:
         print ("company name not found!!!!!")
         myData["company"] = "N/A"
@@ -51,7 +51,7 @@ def parse_file(file_name):
         accident_date = date_dirty.replace('DATE Of ACCIDENT: ', '')
 
         print('\n\ndate of accident is: ' +accident_date)
-        myData["accidentDate"] = accident_date
+        myData["accidentDate"] = accident_date.strip()
     else:
         print ("DATE Of ACCIDENT:not found!!!!!")
         myData["accidentDate"] = "N/A"
@@ -74,10 +74,11 @@ def parse_file(file_name):
 
     # manual vs autonomous
     manual_or_autonomous = 'N/A'
-    if 'autonomous mode' in desc:
-        manual_or_autonomous = 'autonomous mode'
-    elif 'manual mode' in desc or 'conventional mode' in desc:
+    if 'manual mode' in desc or 'conventional mode' in desc:
         manual_or_autonomous = 'manual mode'
+    elif 'autonomous mode' in desc:
+        manual_or_autonomous = 'autonomous mode'
+    
     print("\nVehicle was in " + manual_or_autonomous)
     myData["mode"] = manual_or_autonomous
 
