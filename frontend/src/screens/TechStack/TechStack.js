@@ -49,28 +49,7 @@ function TechStack() {
                <td>{stack.providingService.trim() !==""?(stack.providingService.split('|').map((point)=>{return <li>{point.trim()}</li>})):""}</td>
                </tr></tbody>
         })}
-                {/* <tr>
-                <td>Waymo</td>
-                {Array.from({ length: 8 }).map((_, index) => (
-                    <td key={index}><ul>
-                    <li>Coffee ohh let it fall down arms legs</li>
-                    <li>Tea</li>
-                    <li>Milk least of my care, so let me ask youuu. Dreaming. Real as stone of your crown</li>
-                  </ul> {index}</td>
-                ))}
-                </tr>
-                <tr>
-                <td>Cruise</td>
-                {Array.from({ length: 8 }).map((_, index) => (
-                    <td key={index}>Table cell {index}</td>
-                ))}
-                </tr>
-                <tr>
-                <td>Argo</td>
-                {Array.from({ length: 8 }).map((_, index) => (
-                    <td key={index}>Table cell {index}</td>
-                ))}
-                </tr> */}
+             
             
             </Table>
         </div>

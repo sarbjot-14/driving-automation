@@ -1,12 +1,12 @@
 import express from "express";
 import {
-  getTechStacks,
+  getCollisions,
 
-} from "../controllers/techStackController.js";
+} from "../controllers/collisionController.js";
 const router = express.Router();
 //import { protect } from "../middleware/authMiddleware.js";
 
-router.route("/").get(getTechStacks);
+router.route("/").get(getCollisions);
 
 
 export default router;

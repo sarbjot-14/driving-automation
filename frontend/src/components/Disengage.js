@@ -57,7 +57,6 @@ const  Disengage = () =>{
 
         return (
             <div>
-                <h1>hello</h1>
                 
                 <LineChart width={600} height={700} data={disengagement ?disengagement :[]}
                 margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>

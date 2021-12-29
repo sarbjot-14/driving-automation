@@ -45,7 +45,7 @@ const  MileageDisengage = () =>{
             //console.log("whhyyy"  + newKeys)
             // do mile/disengage
             let tempObj = {}
-            console.log(disengagement.length) 
+       //console.log(disengagement.length) 
             const len = disengagement.length
             if(typeof disengagement != "undefined" && typeof mileageDisengage != "undefined"){
                 for(let k = 0; k<len;k++){
@@ -61,7 +61,7 @@ const  MileageDisengage = () =>{
                 }
             }
             
-            console.log(mileageDisengagements)
+            //console.log(mileageDisengagements)
             //console.log(theKeys)
 
         } 
@@ -85,7 +85,6 @@ const  MileageDisengage = () =>{
 
         return (
             <div>
-                <h1>hello</h1>
                 
                 <LineChart width={600} height={700} data={disengagement ?mileageDisengagements :[]}
                 margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>

@@ -11,9 +11,15 @@ import {
 
 } from "./reducers/mileageDisengagementReducers";
 
+import {
+  collisionListReducer,
+
+} from "./reducers/collisionsReducers";
+
 
 const reducer = combineReducers({
   techStackList: techStackListReducer,
+  collisionList: collisionListReducer,
   mileageDisengageList: mileageDisengageListReducer
 
 });

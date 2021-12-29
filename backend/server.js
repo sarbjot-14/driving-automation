@@ -7,6 +7,7 @@ import path from "path";
 import  techStackRoutes from "./routes/techStackRoutes.js";
 import  mileageDisengageRoutes from "./routes/mileageDisengageRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
+import  collisionsRoutes from "./routes/collisionsRoutes.js";
 import { errorHandler, notFound } from "./middleware/errorMiddleware.js";
 
 dotenv.config();
@@ -18,6 +19,7 @@ const app = express(); // main thing
 app.use(express.json()); // to accept json data
 
 app.use("/api/techStacks", techStackRoutes);
+app.use("/api/collisions", collisionsRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/mileageDisengage", mileageDisengageRoutes)
 

@@ -35,7 +35,7 @@ def parse_file(file_name):
         company_name = company_name_dirty.replace('BuSINESS NAME: ', '')
 
         print('\n\nCompany name is: ' +company_name)
-        myData["Company"] = company_name.strip()
+        myData["company"] = company_name.strip()
     else:
         print ("company name not found!!!!!")
         myData["company"] = "N/A"
@@ -95,7 +95,7 @@ def parse_file(file_name):
             damage = 'minor'
 
         print('\n\n damage is: ' +damage)
-        myData["damage"] = damage
+        myData["damage"] = damage.lower()
     else:
         print ("damage:not found!!!!!")
         myData["damage"] = 'N/A'

@@ -179,7 +179,6 @@ const  Mileage = () =>{
 
         return (
             <div>
-                <h1>hello</h1>
                 
                 <LineChart width={600} height={700} data={mileageDisengage?mileageDisengage:[]}
                 margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>

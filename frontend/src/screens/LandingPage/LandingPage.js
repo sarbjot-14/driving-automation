@@ -6,6 +6,7 @@ import React, { useEffect } from "react";
 import Mileage from "../../components/Mileage";
 import Disengage from "../../components/Disengage";
 import MileageDisengage from "../../components/MileageDisengage";
+import Collision from "../../components/Collision";
 
 
 //import "./LandingStyles.css";
@@ -15,9 +16,14 @@ function LandingPage({ history }) {
 
 
   return (
-    // <div><Mileage/></div>
-    // <dev><Disengage/></dev>
-    <dev><MileageDisengage/></dev>
+    <div>
+  <div><Mileage/></div>
+    <div><Disengage/></div>
+    <div><MileageDisengage/></div>
+    <div><Collision/></div>
+
+    </div>
+  
   );
 }
 
