@@ -1,137 +1,16 @@
-import React , { useEffect, useState } from "react";
+import React , { useEffect} from "react";
 import { LineChart, Line, YAxis, XAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
 import { useDispatch,useSelector } from "react-redux";
 import { listMileageDisengage } from "../actions/listMileageDisengageActions";
 
-const data = [
-  {
-    "year": "Jan 2019",
-    "Waymo": 3432,
-    "Cruise": 2342,
-    "Apple":1000
-},
-{
-    "year": "Feb 2019",
-    "Waymo": 2342,
-    "Cruise": 3246,
-    "Apple":5000
-},
-{
-    "year": "Mar 2019",
-    "Waymo": 4565,
-    "Cruise": 4556,
-    "Apple":4000
-},
-{
-    "year": "Apr 2019",
-    "Waymo": 6654,
-    "Cruise": 4465,
-    "Apple":3000
-},
-{
-    "year": "May 2019",
-    "Waymo": 8765,
-    "Cruise": 4553,
-    "Apple":4000
-},
-  {
-      "year": "Jan 2020",
-      "Waymo": 3432,
-      "Cruise": 2342,
-      "Apple":1000
-  },
-  {
-      "year": "Feb 2020",
-      "Waymo": 2342,
-      "Cruise": 3246,
-      "Apple":5000
-  },
-  {
-      "year": "Mar 2020",
-      "Waymo": 4565,
-      "Cruise": 4556,
-      "Apple":4000
-  },
-  {
-      "year": "Apr 2020",
-      "Waymo": 6654,
-      "Cruise": 4465,
-      "Apple":3000
-  },
-  {
-      "year": "May 2020",
-      "Waymo": 8765,
-      "Cruise": 4553,
-      "Apple":4000
-  },
-  {
-    "year": "Jan 2021",
-    "Waymo": 3432,
-    "Cruise": 2342,
-    "Apple":1000
-},
-{
-    "year": "Feb 2021",
-    "Waymo": 2342,
-    "Cruise": 3246,
-    "Apple":5000
-},
-{
-    "year": "Mar 2021",
-    "Waymo": 4565,
-    "Cruise": 4556,
-    "Apple":4000
-},
-{
-    "year": "Apr 2021",
-    "Waymo": 6654,
-    "Cruise": 4465,
-    "Apple":3000
-},
-{
-    "year": "May 2021",
-    "Waymo": 8765,
-    "Cruise": 4553,
-    "Apple":4000
-},
-  {
-      "year": "Jan 2022",
-      "Waymo": 3432,
-      "Cruise": 2342,
-      "Apple":1000
-  },
-  {
-      "year": "Feb 2022",
-      "Waymo": 2342,
-      "Cruise": 3246,
-      "Apple":5000
-  },
-  {
-      "year": "Mar 2022",
-      "Waymo": 4565,
-      "Cruise": 4556,
-      "Apple":4000
-  },
-  {
-      "year": "Apr 2022",
-      "Waymo": 6654,
-      "Cruise": 4465,
-      "Apple":3000
-  },
-  {
-      "year": "May 2022",
-      "Waymo": 8765,
-      "Cruise": 4553,
-      "Apple":4000
-  }
-]
+
 
 const  Mileage = () =>{
     const dispatch = useDispatch();
 
     const mileageDisengagementList = useSelector((state) => state.mileageDisengageList);
-    const { loading, error, mileageDisengage } = mileageDisengagementList;
+    const {  mileageDisengage } = mileageDisengagementList;
     //let mileage = []
     //let [mileage, setMileage] = useState([]);
     let theKeys = [];

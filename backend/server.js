@@ -8,6 +8,7 @@ import  techStackRoutes from "./routes/techStackRoutes.js";
 import  mileageDisengageRoutes from "./routes/mileageDisengageRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import  collisionsRoutes from "./routes/collisionsRoutes.js";
+import  suggestionsRoutes from "./routes/suggestionsRoutes.js";
 import { errorHandler, notFound } from "./middleware/errorMiddleware.js";
 
 dotenv.config();
@@ -22,6 +23,8 @@ app.use("/api/techStacks", techStackRoutes);
 app.use("/api/collisions", collisionsRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/mileageDisengage", mileageDisengageRoutes)
+app.use("/api/suggestions", suggestionsRoutes)
+
 
 // --------------------------deployment------------------------------
 const __dirname = path.resolve();

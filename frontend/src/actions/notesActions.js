@@ -20,9 +20,9 @@ export const listNotes = () => async (dispatch, getState) => {
       type: NOTES_LIST_REQUEST,
     });
 
-    const {
-      userLogin: { userInfo },
-    } = getState();
+    // const {
+    //   userLogin: { userInfo },
+    // } = getState();
 
 
     const { data } = await axios.get(`/api/notes`);

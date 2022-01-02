@@ -1,4 +1,4 @@
-import React , { useEffect, useState } from "react";
+import React , { useEffect} from "react";
 import { LineChart, Line, YAxis, XAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
 import { useDispatch,useSelector } from "react-redux";
@@ -9,9 +9,8 @@ const  Disengage = () =>{
     const dispatch = useDispatch();
 
     const mileageDisengagementList = useSelector((state) => state.mileageDisengageList);
-    const { loading, error, mileageDisengage, disengagement } = mileageDisengagementList;
-    //let mileage = []
-    //let [mileage, setMileage] = useState([]);
+    const { disengagement } = mileageDisengagementList;
+
     let theKeys = [];
     let newKeys = [];
     var colorArray = ['#FF6633', '#FFB399', '#FF33FF',  '#00B3E6', 
@@ -29,8 +28,8 @@ const  Disengage = () =>{
         console.log(disengagement )
         //console.log(Object.keys(disengagement [0]).filter((item)=> item !== 'year').map((elem)=>elem))
         try{
-            theKeys = disengagement ?(Object.keys(disengagement [0]).filter((item)=> item !== 'year').map((elem)=>elem)):[];
-            theKeys = theKeys.concat(Object.keys(disengagement [1]).filter((item)=> item !== 'year').map((elem)=>elem))
+            theKeys = disengagement ?(Object.keys(disengagement[0]).filter((item)=> item !== 'year').map((elem)=>elem)):[];
+            theKeys = theKeys.concat(Object.keys(disengagement[1]).filter((item)=> item !== 'year').map((elem)=>elem))
             theKeys = [...new Set(theKeys)];
             for(let i = 0; i<theKeys.length; i++){
                 newKeys.push({"theKey":theKeys[i], "color":colorArray[i]})

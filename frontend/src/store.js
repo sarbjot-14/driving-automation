@@ -16,12 +16,16 @@ import {
 
 } from "./reducers/collisionsReducers";
 
+import {
+  suggestionUpdateReducer,
+
+} from "./reducers/suggestionReducers";
 
 const reducer = combineReducers({
   techStackList: techStackListReducer,
   collisionList: collisionListReducer,
-  mileageDisengageList: mileageDisengageListReducer
-
+  mileageDisengageList: mileageDisengageListReducer,
+  suggestions : suggestionUpdateReducer
 });
 
 

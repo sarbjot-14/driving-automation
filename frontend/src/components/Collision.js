@@ -9,7 +9,7 @@ const Collision = () => {
     const dispatch = useDispatch();
 
     const collisionList = useSelector((state) => state.collisionList);
-    const { loading, error, collisions } = collisionList;
+    const { loading,  collisions } = collisionList;
     const [numberOfCollisions, setNumberOfCollisions] = useState(10);
     if(collisions){
         //console.log(collisions)

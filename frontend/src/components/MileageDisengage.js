@@ -1,4 +1,4 @@
-import React , { useEffect, useState } from "react";
+import React , { useEffect } from "react";
 import { LineChart, Line, YAxis, XAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
 import { useDispatch,useSelector } from "react-redux";
@@ -9,7 +9,7 @@ const  MileageDisengage = () =>{
     const dispatch = useDispatch();
 
     const mileageDisengagementList = useSelector((state) => state.mileageDisengageList);
-    const { loading, error, mileageDisengage, disengagement } = mileageDisengagementList;
+    const {  mileageDisengage, disengagement } = mileageDisengagementList;
     //let mileage = []
     //let [mileage, setMileage] = useState([]);
     console.log(mileageDisengage)
@@ -32,8 +32,8 @@ const  MileageDisengage = () =>{
         console.log(disengagement )
         //console.log(Object.keys(disengagement [0]).filter((item)=> item !== 'year').map((elem)=>elem))
         try{
-            theKeys = disengagement ?(Object.keys(disengagement [0]).filter((item)=> item !== 'year').map((elem)=>elem)):[];
-            theKeys = theKeys.concat(Object.keys(disengagement [1]).filter((item)=> item !== 'year').map((elem)=>elem))
+            theKeys = disengagement ?(Object.keys(disengagement[0]).filter((item)=> item !== 'year').map((elem)=>elem)):[];
+            theKeys = theKeys.concat(Object.keys(disengagement[1]).filter((item)=> item !== 'year').map((elem)=>elem))
             theKeys = [...new Set(theKeys)];
             for(let i = 0; i<theKeys.length; i++){
                 newKeys.push({"theKey":theKeys[i], "color":colorArray[i]})
@@ -49,13 +49,13 @@ const  MileageDisengage = () =>{
             const len = disengagement.length
             if(typeof disengagement != "undefined" && typeof mileageDisengage != "undefined"){
                 for(let k = 0; k<len;k++){
-                    console.log(k)
+                    //console.log(k)
                     //tempObj = mileageDisengage[k]
                     tempObj = {"year":disengagement[k].year}
-                    console.log(newKeys)
+                    //console.log(newKeys)
                     for(let m = 0; m<newKeys.length; m++){
                         tempObj[theKeys[m]] = mileageDisengage[k][theKeys[m]]/disengagement[k][theKeys[m]]
-                        console.log(tempObj)
+                        //console.log(tempObj)
                     }
                     mileageDisengagements.push(tempObj)
                 }
