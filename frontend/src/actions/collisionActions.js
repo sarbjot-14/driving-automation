@@ -1,57 +1,59 @@
 import {
-    COLLISIONS_LIST_FAIL,
-    COLLISIONS_LIST_REQUEST,
-    COLLISIONS_LIST_SUCCESS,
-  } from "../constants/collisionsConstants";
-  import axios from "axios";
-  
-  export const listCollisions = () => async (dispatch, getState) => {
-    try {
-      dispatch({
-        type: COLLISIONS_LIST_REQUEST,
-      });
-  
-  
-      let { data } = await axios.get(`/api/collisions`);
+  COLLISIONS_LIST_FAIL,
+  COLLISIONS_LIST_REQUEST,
+  COLLISIONS_LIST_SUCCESS,
+} from "../constants/collisionsConstants";
+import axios from "axios";
 
-      // splice
-      //data = data.slice(0,20)
-      console.log(data)
-      // convert to days
-      // for(let i = 0;i<data.length; i++){
-      //   //data[i].description =''
-      //   data[i]['days'] = parseInt(data[i].accidentDate.split('/')[0]) *30 +parseInt(data[i].accidentDate.split('/')[1]) + parseInt((data[i].accidentDate.split('/')[2]).slice(-2))*365
-      //   //console.log(parseInt((data[i].accidentDate.split('/')[2]).slice(-2))*365)
-      // }
-  
+export const listCollisions = () => async (dispatch, getState) => {
+  try {
+    dispatch({
+      type: COLLISIONS_LIST_REQUEST,
+    });
 
-      // sort
-      let dataSorted = data.sort((a,b)=>{
-        let aa = parseInt(a.accidentDate.split('/')[0]) *30 +parseInt(a.accidentDate.split('/')[1]) + parseInt((a.accidentDate.split('/')[2]).slice(-2))*365
-        let bb = parseInt(b.accidentDate.split('/')[0]) *30 +parseInt(b.accidentDate.split('/')[1]) + parseInt((b.accidentDate.split('/')[2]).slice(-2))*365
-        return bb-aa
-      })
-      console.log(dataSorted)
-      
-      dispatch({
-        type: COLLISIONS_LIST_SUCCESS,
-        payload: dataSorted,
-      });
-    } catch (error) {
-      const message =
-        error.response && error.response.data.message
-          ? error.response.data.message
-          : error.message;
-      dispatch({
-        type: COLLISIONS_LIST_FAIL,
-        payload: message,
-      });
-    }
-  };
-  
-  
+    let { data } = await axios.get(`/api/collisions`);
 
-  /*
+    // splice
+    //data = data.slice(0,20)
+    console.log(data);
+    // convert to days
+    // for(let i = 0;i<data.length; i++){
+    //   //data[i].description =''
+    //   data[i]['days'] = parseInt(data[i].accidentDate.split('/')[0]) *30 +parseInt(data[i].accidentDate.split('/')[1]) + parseInt((data[i].accidentDate.split('/')[2]).slice(-2))*365
+    //   //console.log(parseInt((data[i].accidentDate.split('/')[2]).slice(-2))*365)
+    // }
+
+    // sort
+    let dataSorted = data.sort((a, b) => {
+      let aa =
+        parseInt(a.accidentDate.split("/")[0]) * 30 +
+        parseInt(a.accidentDate.split("/")[1]) +
+        parseInt(a.accidentDate.split("/")[2].slice(-2)) * 365;
+      let bb =
+        parseInt(b.accidentDate.split("/")[0]) * 30 +
+        parseInt(b.accidentDate.split("/")[1]) +
+        parseInt(b.accidentDate.split("/")[2].slice(-2)) * 365;
+      return bb - aa;
+    });
+    console.log(dataSorted);
+
+    dispatch({
+      type: COLLISIONS_LIST_SUCCESS,
+      payload: dataSorted,
+    });
+  } catch (error) {
+    const message =
+      error.response && error.response.data.message
+        ? error.response.data.message
+        : error.message;
+    dispatch({
+      type: COLLISIONS_LIST_FAIL,
+      payload: message,
+    });
+  }
+};
+
+/*
   let sortedData = data.sort((a, b) => {
         //const d1 = new Date('2019-06-01');
         const ad = new Date(a.accidentDate.split('/')[2]+'-'+(a.accidentDate.split('/')[0]).length ===2?a.accidentDate.split('/')[0]: '0'+a.accidentDate.split('/')[0]+'-'+a.accidentDate.split('/')[1])
