@@ -18,7 +18,7 @@ function Header({ setSearch }) {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/TechStack">Tech Stack</Nav.Link>
             {/* <Nav.Link href="/">Pricing</Nav.Link> */}
-            {/* <Nav.Link href="/">Polls</Nav.Link> */}
+            <Nav.Link href="/Polls">Polls</Nav.Link>
             {/* <Nav.Link href="/">Transition</Nav.Link> */}
           </Nav>
         </Navbar.Collapse>
