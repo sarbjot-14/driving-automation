@@ -16,13 +16,7 @@ const importData = async () => {
     await Note.deleteMany();
     await User.deleteMany();
 
-    //const createdUsers = await User.insertMany(users);
-
-    //const adminUser = createdUsers[0]._id;
-
-    // const sampleNotes = notes.map((note) => {
-    //   return { ...note, user: adminUser };
-    // });
+   
 
     await Note.insertMany(notes);
 

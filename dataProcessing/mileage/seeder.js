@@ -151,18 +151,7 @@ fs.readFile(filePath, (error, data) => {
   }
 };
 
-// const destroyData = async () => {
-//   try {
-//     await Note.deleteMany();
-//     await User.deleteMany();
 
-//     console.log("Data Destroyed!".red.inverse);
-//     process.exit();
-//   } catch (error) {
-//     console.error(`${error}`.red.inverse);
-//     process.exit(1);
-//   }
-// };
 
 if (process.argv[2] === "-d") {
   destroyData();

@@ -15,11 +15,7 @@ function TechStack() {
   console.log(loading);
   useEffect(() => {
     dispatch(listTechStacks());
-  }, [
-    dispatch,
-    // successCreate,
-    // successUpdate,
-  ]);
+  }, [dispatch]);
   const headers = [
     "Participant",
     "Model",

@@ -16,12 +16,7 @@ export const listCollisions = () => async (dispatch, getState) => {
     // splice
     //data = data.slice(0,20)
     console.log(data);
-    // convert to days
-    // for(let i = 0;i<data.length; i++){
-    //   //data[i].description =''
-    //   data[i]['days'] = parseInt(data[i].accidentDate.split('/')[0]) *30 +parseInt(data[i].accidentDate.split('/')[1]) + parseInt((data[i].accidentDate.split('/')[2]).slice(-2))*365
-    //   //console.log(parseInt((data[i].accidentDate.split('/')[2]).slice(-2))*365)
-    // }
+
 
     // sort
     let dataSorted = data.sort((a, b) => {
