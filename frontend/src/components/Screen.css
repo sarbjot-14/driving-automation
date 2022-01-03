@@ -16,7 +16,7 @@
 }
 
 .collisionTable{
-  padding:10%;
+  /* padding:10%; */
 
 }
 
@@ -36,4 +36,33 @@
   margin-left: 2%;
   margin-right:2%;
   
+}
+
+.justify-content-center.row{
+  padding:10px;
+}
+.row{
+  margin-top:27px;
+}
+/* .btn.btn-primary{
+
+    margin-left:50px
+} */
+.showMore{
+  margin-left:45%;
+
+}
+
+
+h2{
+ 
+  text-align: center;
+ 
+}
+
+#collision-header{
+  /* margin-left : 45%; */
+  /* text-align: center; */
+  margin:auto;
+  padding-bottom:10px;
 }

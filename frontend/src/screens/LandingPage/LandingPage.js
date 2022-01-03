@@ -1,5 +1,7 @@
 import React, {  } from "react";
-// import { Button, Container, Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
+import "../../components/Screen.css";
+
 //import { useSelector } from "react-redux";
 // import { Link } from "react-router-dom";
 // import Mileage from "../../components/Mileage";
@@ -16,13 +18,14 @@ function LandingPage({ history }) {
 
 
   return (
-    <div>
-  <div><Mileage/></div>
-    <div><Disengage/></div>
-    <div><MileageDisengage/></div>
-    <div><Collision/></div>
+    <Container>
 
-    </div>
+    <Row><Mileage/></Row>
+    <Row><Disengage/></Row>
+    <Row><MileageDisengage/></Row>
+    <Row><Collision/></Row>
+
+    </Container>
   
   );
 }
