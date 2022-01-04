@@ -7,10 +7,12 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
+  ResponsiveContainer 
 } from "recharts";
 import "./Screen.css";
 import { useDispatch, useSelector } from "react-redux";
 import { listMileageDisengage } from "../actions/listMileageDisengageActions";
+import "./Graphs.css"
 
 const MileageDisengage = () => {
   const dispatch = useDispatch();
@@ -112,8 +114,15 @@ const MileageDisengage = () => {
           tempObj = { year: disengagement[k].year };
           //console.log(newKeys)
           for (let m = 0; m < newKeys.length; m++) {
-            tempObj[theKeys[m]] =
-              mileageDisengage[k][theKeys[m]] / disengagement[k][theKeys[m]];
+            let milesPerDis = mileageDisengage[k][theKeys[m]] / disengagement[k][theKeys[m]];
+            if (isNaN(milesPerDis)){
+              milesPerDis = 0;
+            }
+            else{
+              milesPerDis = milesPerDis.toFixed(2)
+            }
+            tempObj[theKeys[m]] = milesPerDis
+              
             //console.log(tempObj)
           }
           mileageDisengagements.push(tempObj);
@@ -140,8 +149,10 @@ const MileageDisengage = () => {
           (DMV)
         </a>
       </h2>
+      <ResponsiveContainer width="95%" height={700}>
+
       <LineChart
-        width={600}
+        // width={600}
         height={700}
         data={disengagement ? mileageDisengagements : []}
         margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
@@ -163,6 +174,7 @@ const MileageDisengage = () => {
             );
           })}
       </LineChart>
+      </ResponsiveContainer> 
     </div>
   );
 };
