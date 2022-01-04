@@ -7,6 +7,7 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
+  ResponsiveContainer
 } from "recharts";
 
 import { useDispatch, useSelector } from "react-redux";
@@ -109,8 +110,9 @@ const Disengage = () => {
           (DMV)
         </a>
       </h2>
+      <ResponsiveContainer width="95%" height={900}>
       <LineChart
-        width={600}
+        // width={600}
         height={700}
         data={disengagement ? disengagement : []}
         margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
@@ -132,6 +134,7 @@ const Disengage = () => {
             );
           })}
       </LineChart>
+      </ResponsiveContainer>
     </div>
   );
 };

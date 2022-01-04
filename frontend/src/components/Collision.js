@@ -30,8 +30,12 @@ const Collision = () => {
   ]);
   const headers = ["Company", "Accident Date", "Description", "Mode", "Damage"];
   //const data = [{"Id":1, "details":{}}]
+
+  // table two
+  console.log(window.innerWidth)
+
   return (
-    <Container>
+    <Container fluid ="md">
       <Row>
         <h2 id="collision-header">
           Collisions Reported{" "}
@@ -41,6 +45,7 @@ const Collision = () => {
         </h2>
         <div className="collisionTable">
           {loading && <Loading />}
+          
 
           <Table responsive>
             <thead>
@@ -60,7 +65,7 @@ const Collision = () => {
                       <tr key={col._id}>
                         <td>{col.company}</td>
                         <td>{col.accidentDate}</td>
-                        <td>{col.description}</td>
+                        <td >{col.description}</td>
                         <td>{col.mode}</td>
                         <td>{col.damage}</td>
                       </tr>
