@@ -36,6 +36,7 @@ then reinstalled my deleted packages/file using yarn install
 - [Express JS](https://expressjs.com/)
 - [Mongo DB](https://www.mongodb.com/)
 - [Bootstrap](http://getbootstrap.com/)
+- [Redux]
 
 ## Team
 
@@ -43,9 +44,5 @@ then reinstalled my deleted packages/file using yarn install
 MIT © [Sarbjot](https://github.com/sarbjot-14)
 
 ## Credit
-[![Piyush Agarwal](https://avatars1.githubusercontent.com/u/51760520?v=3&s=144)](https://github.com/piyush-eon)
 
-MIT © [Piyush Agarwal ](https://github.com/piyush-eon)
-
-## [Click Here to Watch Full tutorial on Youtube](https://www.youtube.com/watch?v=IQXjO0t4XRM&list=PLKhlp2qtUcSYC7EffnHzD-Ws2xG-j3aYo)
-![MERN 1](https://user-images.githubusercontent.com/51760520/124705210-ea67ab00-df12-11eb-88cd-e9060c2942b9.png)
+# https://github.com/piyush-eon/notezipper
