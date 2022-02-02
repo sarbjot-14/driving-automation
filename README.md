@@ -12,7 +12,7 @@
 ## Demo
 Here is a working live demo :  https://driving-automation.herokuapp.com/
 
-# Develop
+## Develop
 make sure NODE_ENV is set to development
 npm run dev
 
@@ -21,9 +21,8 @@ cd frontend
 npm run build
 push to production branch
 
-# Trouble Shooting
+## Trouble Shooting
 https://stackoverflow.com/questions/69693907/error-err-package-path-not-exported-package-subpath-lib-tokenize-is-not-d
-
 
 removed /node_modules and yarn.lock files
 then reinstalled my deleted packages/file using yarn install
