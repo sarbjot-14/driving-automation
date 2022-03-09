@@ -35,7 +35,7 @@ then reinstalled my deleted packages/file using yarn install
 - [Express JS](https://expressjs.com/)
 - [Mongo DB](https://www.mongodb.com/)
 - [Bootstrap](http://getbootstrap.com/)
-- [Redux]
+- Redux
 
 ## Team
 
